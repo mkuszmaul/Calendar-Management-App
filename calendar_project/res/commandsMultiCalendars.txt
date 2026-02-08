@@ -1,0 +1,23 @@
+create calendar --name MyCal --timezone Europe/London
+edit calendar --name MyCal --property name SuperCoolCal
+edit calendar --property name MyCal --name SuperCoolCal
+use calendar --name MyCal
+create event Party on 2025-05-30
+create event DoctorAppointment from 2025-05-30T11:00 to 2025-05-30T12:00
+edit event status DoctorAppointment from 2025-05-30T11:00 to 2025-05-30T12:00 with false
+create event Work from 2025-01-01T09:00 to 2025-01-01T17:00 repeats MTWRF until 2025-12-30
+create event DnD from 2025-01-01T16:00 to 2025-01-01T20:00 repeats U for 12 times
+edit calendar --property timezone Europe/Moscow --name MyCal
+create calendar --timezone America/New_York --name EastCoastCal
+copy events on 2025-05-30 --target EastCoastCal to 2025-06-10
+print events on 2025-05-30
+use calendar --name EastCoastCal
+create event Class on 2025-05-01 repeats MTWR until 2025-07-01
+create event TacoTuesday on 2025-01-01 repeats T for 100 times
+edit series location TacoTuesday from 2025-01-01T08:00 with Kitchen
+edit event description TacoTuesday from 2025-05-27T08:00 to 2025-05-27T17:00 with fun!!
+edit events subject Class from 2025-06-01T08:00 with JuneClasses
+print events from 2025-05-20T08:00 to 2025-06-10T23:00
+show status on 2025-05-10T12:00
+show status on 2025-05-10T01:00
+exit

@@ -1,0 +1,12 @@
+create calendar --name MyCal --timezone Europe/London
+edit calendar --name MyCal --property name SuperCoolCal
+edit calendar --property name MyCal --name SuperCoolCal
+use calendar --name MyCal
+create event Party on 2025-05-30
+edit calendar --property timezone Russia/Moscow --name MyCal
+create calendar --timezone America/New_York --name EastCoastCal
+copy events on 2025-05-30 --target EastCoastCal to 2025-06-10
+print events on 2025-05-30
+use calendar --name EastCoastCal
+print events on 2025-06-10
+exit
